@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Spectral);
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Variables */
+:root {
+  --primary-color: silver;
+  --secondary-color: #141414;
+  --accent-color: #27B3A2;
+  --other-color: gainsboro;
+  --white: #f1f1f1;
+  --primary-shadow: rgba(149, 157, 165, 0.8);
+  --secondary-shadow: #a17a69;
+  --secondary-shadow: rgba(149, 157, 165, 0.8);
+  --primary-border-radius: 0 0 10% 10% / 10%;
+  --secondary-border-radius: 11px;
+  --primary-box-shadow: 0px 2px 15px 2px rgba(149, 157, 165, 0.8);
+  --secondary-box-shadow: inset 5px 3px 4px rgba(0, 0, 0, 0.4);
+  --primary-transition: ease-in-out .3s;
+  --secondary-transition: 0.5s ease-in-out;
+}
+
+/* Variables end */
+
+#backgroundVid {
+  position: fixed;
+  object-fit: fill;
+  z-index: -1;
+}
+
+#mobile-header {
+  display: none;
+}
+
+
+body {
+  margin: 0;
+  background-color: var(--secondary-color);
+  font-family: "Spectral";
+  font-size: 125%;
+  color: #f1f1f1;
+  /* scrollbar-gutter: stable both-edges; */
+}
+
+/* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #141414;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #27B3A2;
+}
+
+/*
+ *  STYLE 13
+ */
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  background-color: #CCCCCC;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #27B3A2;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-image: -webkit-linear-gradient(90deg,
+      transparent,
+      rgba(0, 0, 0, 0.4) 50%,
+      transparent,
+      transparent)
+}

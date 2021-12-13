@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>David Barnes | Full-Stack Web Developer</title>
+  <link rel="stylesheet" href="Styles/Main Style.css" />
+  <link rel="stylesheet" href="Styles/Nav.css" />
+  <link rel="stylesheet" href="Styles/About.css" />
+  <link rel="stylesheet" href="Styles/Sidebar.css" />
+  <link rel="stylesheet" href="Styles/Projects.css" />
+  <link rel="stylesheet" href="Styles/Contact.css" />
+  <link rel="stylesheet" href="Styles/Footer.css" />
+  <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 425px)" href="Styles/Mobile.css" />
+</head>
+
+<body>
+  <video autoplay muted loop id="backgroundVid">
+    <source src="Assets/Pictures/Network - 12716 (3).mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
+  <aside id="side-panel">
+    <a href="#about" class="expand" id="side-about">
+      <div>ABOUT</div>
+    </a>
+
+    <a href="#projects" class="expand" id="side-project">
+      <div>PROJECTS</div>
+    </a>
+
+    <a href="#contact" class="expand" id="side-contact">
+      <div>CONTACT</div>
+    </a>
+
+    <div id="side-panel-play" class="expand" onclick="Pause()">
+      <div id="play">PAUSE</div>
+    </div>
+
+    <div class="expand" onclick="Hide()">
+      <div id="side-panel-hide">HIDE</div>
+    </div>
+
+
+    <div id="expand-img-wrapper">
+      <a href="#about" class="expand-img">
+        <svg xmlns="http://www.w3.org/2000/svg" alt="About - Icon" viewBox="0 0 50 50">
+          <path fill="currentColor"
+            d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 25 11 A 3 3 0 0 0 22 14 A 3 3 0 0 0 25 17 A 3 3 0 0 0 28 14 A 3 3 0 0 0 25 11 z M 21 21 L 21 23 L 22 23 L 23 23 L 23 36 L 22 36 L 21 36 L 21 38 L 22 38 L 23 38 L 27 38 L 28 38 L 29 38 L 29 36 L 28 36 L 27 36 L 27 21 L 26 21 L 22 21 L 21 21 z" />
+        </svg>
+
+      </a>
+
+      <a href="#projects" class="expand-img">
+        <svg viewBox="0 0 1024 1024" alt="Project - Icon" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor"
+            d="M762.22546 207.861798a28.200123 28.200123 0 0 1-8.215784 19.947331 27.879387 27.879387 0 0 1-19.836307 8.22812H289.151745a28.187787 28.187787 0 0 1 0-56.363238h445.046296a27.879387 27.879387 0 0 1 19.811635 8.22812 28.212459 28.212459 0 0 1 8.191112 19.959667zM699.361144 374.126565a28.261803 28.261803 0 0 1-8.191112 19.959667 27.867051 27.867051 0 0 1-19.811635 8.228119H324.02565a28.187787 28.187787 0 0 1 0-56.363237h347.332747a28.126107 28.126107 0 0 1 27.953403 28.175451zM628.749813 518.359214a40.708839 40.708839 0 0 1-4.749365 19.947331c-3.059331 5.292149-7.204231 8.252792-11.509499 8.22812H410.871173c-8.980617 0-16.2712-12.607404-16.271199-28.175451s7.290583-28.187787 16.271199-28.187787h201.656784c8.980617 0.074016 16.221855 12.693756 16.221856 28.187787zM740.069983 902.835693h-0.320736a24.449975 24.449975 0 0 1-17.566481-7.79636l-105.485237-113.281596a24.74604 24.74604 0 0 1 1.134913-34.824561 24.388295 24.388295 0 0 1 34.614849 1.147249l88.066788 94.580202L906.754174 673.077474a24.388295 24.388295 0 0 1 34.627185-0.246721 24.74604 24.74604 0 0 1 0.24672 34.849234l-184.127312 187.754098a24.425303 24.425303 0 0 1-17.430784 7.401608z" />
+          <path fill="currentColor"
+            d="M821.993437 1024H201.997822C131.756571 1024 74.603829 966.514185 74.603829 895.865846V128.134154C74.603829 57.485815 131.756571 0 201.997822 0h619.995615c70.241251 0 127.381657 57.485815 127.381657 128.134154v462.958185a25.190136 25.190136 0 1 1-50.380272 0V128.134154c0-42.707273-34.540833-77.457818-77.001385-77.457818H201.997822c-42.460552 0-77.001385 34.750545-77.001385 77.457818V895.865846c0 42.707273 34.540833 77.457818 77.001385 77.457818h619.995615c71.339156 0 77.001385-17.714513 77.001385-40.856871a25.190136 25.190136 0 1 1 50.380272 0c0 45.149803-23.771495 66.787168-43.706489 76.976713-25.23948 12.903468-57.979255 14.556494-83.675168 14.556494z" />
+        </svg>
+      </a>
+
+      <a href="#contact" class="expand-img">
+        <svg xmlns="http://www.w3.org/2000/svg" alt="Contact - Icon" viewBox="0 0 50 50" width="50px" height="50px">
+          <path fill="currentColor"
+            d="M 13 4 C 8.038 4 4 8.037 4 13 L 4 37 C 4 41.963 8.038 46 13 46 L 37 46 C 37.338 46 37.671 45.978406 38 45.941406 L 38 4.0585938 C 37.671 4.0215938 37.338 4 37 4 L 13 4 z M 40 4.5253906 L 40 14 L 46 14 L 46 13 C 46 9.09 43.49 5.7643906 40 4.5253906 z M 22 12 C 29.168 12 35 17.832 35 25 C 35 32.168 29.168 38 22 38 C 14.832 38 9 32.168 9 25 C 9 17.832 14.832 12 22 12 z M 22 14 C 15.935 14 11 18.935 11 25 C 11 27.814 12.071406 30.377219 13.816406 32.324219 C 15.889406 30.225219 18.852 29 22 29 C 25.14 29 28.1135 30.222312 30.1875 32.320312 C 31.9295 30.373313 33 27.812 33 25 C 33 18.935 28.065 14 22 14 z M 40 16 L 40 24 L 46 24 L 46 16 L 40 16 z M 22 18.5 C 24.481 18.5 26.5 20.519 26.5 23 C 26.5 25.481 24.481 27.5 22 27.5 C 19.519 27.5 17.5 25.481 17.5 23 C 17.5 20.519 19.519 18.5 22 18.5 z M 40 26 L 40 34 L 46 34 L 46 26 L 40 26 z M 40 36 L 40 45.474609 C 43.49 44.235609 46 40.91 46 37 L 46 36 L 40 36 z" />
+        </svg>
+      </a>
+
+
+      <a class="expand-img" type="submit" onclick="Pause()">
+        <?xml version="1.0" ?>
+        <svg id="pause" type="submit" alt="Pause Button to stop video - Icon" height="512px" id="Layer_1"
+          style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px"
+          xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g>
+            <path
+              d="M224,435.8V76.1c0-6.7-5.4-12.1-12.2-12.1h-71.6c-6.8,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6   C218.6,448,224,442.6,224,435.8z" />
+            <path
+              d="M371.8,64h-71.6c-6.7,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6c6.7,0,12.2-5.4,12.2-12.2V76.1   C384,69.4,378.6,64,371.8,64z" />
+          </g>
+        </svg>
+
+        <svg id="resume" type="submit" alt="Play Button to start video - Icon" id="Capa_1"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 17.804 17.804" style="enable-background:new 0 0 17.804 17.804;" xml:space="preserve">
+          <g>
+            <g id="c93_stop">
+              <path d="M2.44,0.043c0.14-0.071,0.304-0.051,0.425,0.044l10.777,8.502c0.094,0.074,0.152,0.191,0.152,0.312
+			c0,0.118-0.059,0.24-0.152,0.314L2.864,17.718c-0.072,0.056-0.162,0.086-0.25,0.086l-0.175-0.04
+			c-0.137-0.065-0.223-0.206-0.223-0.362V0.403C2.216,0.249,2.302,0.106,2.44,0.043z" />
+              <path d="M12.616,0.034h2.656c0.175,0,0.316,0.181,0.316,0.399v16.935c0,0.222-0.142,0.403-0.316,0.403h-2.656
+			c-0.174,0-0.316-0.182-0.316-0.403V0.434C12.3,0.215,12.443,0.034,12.616,0.034z" />
+            </g>
+          </g>
+
+        </svg>
+      </a>
+
+      <a class="expand-img" type="submit" onclick="Hide()">
+        <svg id="expand" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+          <g>
+            <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+              <path
+                d="M7561.7,4695.8c-86.4-19.2-172.8-107.5-195.8-193.9c-13.4-46.1-17.3-1593.3-15.4-4438.2l5.8-4369.1l40.3-51.8c21.1-28.8,63.4-71,92.1-92.1c51.8-40.3,71-40.3,1130.7-40.3c1044.3,0,1080.8,1.9,1142.2,38.4c36.5,21.1,80.6,71,101.7,109.4c36.5,69.1,36.5,182.4,36.5,4451.6c0,4875.9,11.5,4463.2-132.5,4551.5l-69.1,44.2l-1036.6,3.8C8091.5,4711.2,7596.2,4705.4,7561.7,4695.8z M9343.1,107.9v-4050.4h-719.9h-719.9V107.9v4050.4h719.9h719.9V107.9z" />
+              <path
+                d="M1290.2,1244.3C635.6,633.9,100,123.2,100,107.9c0-13.4,535.6-524,1190.2-1134.5l1190.2-1109.6l186.2,195.8c103.7,107.5,186.2,201.6,182.4,207.3c-1.9,7.7-380.1,360.9-838.9,787.1l-833.1,775.5l2745.1,9.6c2578.1,9.6,2748.9,11.5,2796.9,44.2c28.8,17.3,65.3,61.4,82.5,94.1c63.4,120.9,25,286-82.5,355.1c-48,32.6-218.8,34.5-2796.9,44.1l-2745.1,9.6l833.1,775.5c458.8,426.2,837,781.3,840.8,787.1c1.9,7.7-80.6,101.7-182.4,209.2l-188.1,195.8L1290.2,1244.3z" />
+            </g>
+          </g>
+        </svg>
+      </a>
+    </div>
+  </aside>
+
+  <section id="mobile-header">
+    <a id="mobile-menu-unhide">
+      <svg type="submit" onclick="mobile()" id="hamburger" viewBox="0 0 100 80" width="40" height="40">
+        <rect fill="currentColor" width="100" height="20" rx="8"></rect>
+        <rect fill="currentColor" y="30" width="100" height="20" rx="8"></rect>
+        <rect fill="currentColor" y="60" width="100" height="20" rx="8"></rect>
+      </svg>
+    </a>
+    <a id="mobile-menu-hide">
+      <svg type="submit" onclick="mobile()" id="no-hamburger" version="1.1" id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+        <g>
+          <path fill="currentColor" class="st0" d="M512,256c0,141.4-114.6,256-256,256S0,397.4,0,256S114.6,0,256,0S512,114.6,512,256z M379.3,155.3
+		c6.3-6.3,6.3-16.4,0-22.7c-6.3-6.3-16.4-6.3-22.7,0L256,233.4L155.3,132.7c-6.3-6.3-16.4-6.3-22.7,0c-6.3,6.3-6.3,16.4,0,22.7
+		L233.4,256L132.7,356.7c-6.3,6.3-6.3,16.4,0,22.7c6.3,6.3,16.4,6.3,22.7,0L256,278.6l100.7,100.7c6.3,6.3,16.4,6.3,22.7,0
+		c6.3-6.3,6.3-16.4,0-22.7L278.6,256L379.3,155.3z" />
+        </g>
+      </svg>
+    </a>
+    <div href="Home Page.html" id="mobile-header-section">
+      <a class="mobile-header-section">HOME</a>
+      <a href="Pages/About/About.html" class=" mobile-header-section">ABOUT</a>
+      <a href="Pages/Projects/Projects.html" class="mobile-header-section">PROJECTS</a>
+      <a href="Pages/Contact/Contact.html" class="mobile-header-section">CONTACT</a>
+    </div>
+  </section>
+
+  <header id="header">
+    <nav>
+      <ul>
+        <li><a href="Home Page.html">HOME</a></li>
+        <li>
+          <a href="Pages/About/About.html">ABOUT</a>
+          <ul>
+            <li><a href="Pages/About/Skills.html">SKILLS</a></li>
+            <li>
+              <a href="Pages/About/Accomplishments.html">ACCOMPLISHMENTS</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="Pages/Projects/Projects.html">PROJECTS</a>
+          <ul>
+            <li>
+              <a href="Pages/Projects/Responsive Design.html">RESPONSIVE DESIGN</a>
+            </li>
+            <li>
+              <a href="Pages/Projects/React JS.html">REACT JS</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="Pages/Contact/Contact.html">CONTACT</a>
+          <ul>
+            <li><a href="Pages/Contact/Social.html">SOCIAL</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="unhide" onmouseover="unhide()" onmouseleave="hide()"></div>
+
+  <section id="about">
+    <div id="bio">
+      <div class="bio-text">
+        Hello! Wecome to my domain. This is my home in cyberspace.
+      </div>
+
+      <div class="bio-text">
+        I develop the world wide web one website at a time.
+      </div>
+
+      <div class="bio-text">
+        The icons below represent my skills. Click an icon for more information.
+      </div>
+    </div>
+
+    <div id="skills" class="skills">
+      <div class="skill-container">
+        <img src="assets/icons/icons8-html-5.svg" alt="HMTL 5 - Icon" class="icon" />
+
+        <div class="skill-name">
+          <span>H</span>
+          <span>T</span>
+          <span>M</span>
+          <span>L</span>
+          <span>&nbsp</span>
+          <span>5</span>
+        </div>
+        <p class="skill-description">
+          HTML 5: HyperText Markup Language is a markup language used for structuring and presenting
+          content on the World Wide Web.
+        </p>
+      </div>
+
+      <div class="skill-container">
+        <img src="assets/icons/icons8-css3.svg" alt="CSS 3 - Icon" class="icon" />
+
+        <div class="skill-name">
+          <span>C</span>
+          <span>S</span>
+          <span>S</span>
+          <span>&nbsp</span>
+          <span>3</span>
+        </div>
+        <div class="skill-description">
+          CSS 3: Cascading Style Sheets, a style sheet language, is a cornerstone technology of the
+          World Wide Web used for describing the presentation of a document
+          written in markup languages such as HTML.
+        </div>
+      </div>
+
+      <div class="skill-container">
+        <img src="assets/icons/icons8-javascript.svg" alt="JavaScript 5 - Icon" class="icon" />
+
+        <div class="skill-name">
+          <span>J</span>
+          <span>A</span>
+          <span>V</span>
+          <span>A</span>
+          <span>S</span>
+          <span>C</span>
+          <span>R</span>
+          <span>I</span>
+          <span>P</span>
+          <span>T</span>
+          <span>&nbsp</span>
+          <span>5</span>
+
+        </div>
+        <div class="skill-description">
+          JavaScript, alongside HTML and CSS, is one of the high-level core
+          technologies of the World Wide Web. As a multi-paradigm language,
+          JavaScript supports event-driven, functional, and imperative
+          programming styles.
+        </div>
+      </div>
+
+      <div class="skill-container">
+        <img src="assets/icons/icons8-react-native.svg" alt="React JS - Icon" class="icon" />
+
+        <div class="skill-name">
+          <span>R</span>
+          <span>E</span>
+          <span>A</span>
+          <span>C</span>
+          <span>T</span>
+          <span>&nbsp</span>
+          <span>J</span>
+          <span>S</span>
+        </div>
+        <div class="skill-description">
+          React is an open-source front-end JavaScript library for building
+          user interfaces or UI components. React can be used as a base in the
+          development of single-page or mobile applications.
+        </div>
+      </div>
+
+      <div class="skill-container">
+        <img src="assets/icons/icons8-npm.svg" alt="NPM - Icon" class="icon" />
+
+        <div class="skill-name">
+          <span>N</span>
+          <span>P</span>
+          <span>M</span>
+        </div>
+        <div class="skill-description">
+          NPM is the default package manager for the JavaScript runtime environment
+          Node.js. It
+          consists of a
+          command line client, also called npm, and an online database of public and paid-for private packages, called
+          the npm registry.
+        </div>
+      </div>
+
+
+
+      <div class="skill-container">
+        <img src="assets/icons/icons8-nodejs.svg" alt="Node.js - Icon" class="icon" />
+
+        <div class="skill-name">
+          <span>N</span>
+          <span>O</span>
+          <span>D</span>
+          <span>E</span>
+          <span>&nbsp</span>
+          <span>J</span>
+          <span>S</span>
+        </div>
+        <div class="skill-description">
+          Node.js is an open-source, cross-platform, back-end JavaScript
+          runtime environment that lets developers use JavaScript to write
+          command line tools to produce dynamic web page content before the
+          page is sent to the user's web browser.
+        </div>
+      </div>
+
+      <div class="skill-container">
+        <img src="assets/icons/icons8-git.svg" alt="GIT - Icon" class="icon" />
+
+        <div class="skill-name">
+          <span>G</span>
+          <span>I</span>
+          <span>T</span>
+        </div>
+        <div class="skill-description">
+          Git is a free and open source distributed version control system
+          designed to handle everything from small to very large projects with
+          speed and efficiency.
+        </div>
+      </div>
+
+      <script src="Scripts/Skills.js"></script>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div id="project-descriptions">
+      <p>Click a project name for a preview. Click an icon to see the
+        project:
+      </p>
+
+      <div id="project-wrapper">
+        <div class="project-container">
+          <div class="project-name" id="responsive-design">RESPONSIVE DESIGN</div>
+          <a href="Pages/Projects/Responsive Design/Tribute Page/Tribute Page.html" title="Tribute Page: Carl Sagan"
+            target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/Projects/SeekPng.com_responsive-website-png_2492971.png"
+              alt="Responsive Design - Icon" id="responsive-design" class="project-icon" />
+          </a>
+        </div>
+
+        <div class="project-container">
+          <div class="project-name" id="react">REACT JS</div>
+          <a href="https://davidmbarnes.github.io/robofriends/" title="React App: Robofriends" target="_blank"
+            rel="noopener noreferrer">
+            <img src="assets/icons/Projects/pngaaa.com-2507950.png" alt="React JS - Icon" id="react"
+              class="project-icon" />
+          </a>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    <div id="carousel">
+      <div id="slider">
+        <div class="slider">
+          <a class="slides" title="Tribute Page: Carl Sagan"
+            href="Pages/Projects/Responsive Design/Tribute Page/Tribute Page.html" target="_blank" rel="noopener
+            noreferrer">
+            <div class="image">
+              <img src="Assets/Carusel/sagan.gif"
+                alt="Preview of Carl Sagan Tribut Page, a Responsive Desing Project" />
+            </div>
+          </a>
+
+          <a class="slides" title="Robofriends" href="https://davidmbarnes.github.io/robofriends/" target="_blank"
+            rel="noopener noreferrer">
+            <div class="image">
+              <img src="Assets/Carusel/robofriends.gif" alt="Robofriends app, a React JS Project" />
+            </div>
+          </a>
+
+        </div>
+        <svg id="wave-top" class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#27B3A2" fill-opacity="1"
+            d="M0,64L120,53.3C240,43,480,21,720,37.3C960,53,1200,107,1320,133.3L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z">
+          </path>
+        </svg>
+
+        <svg id="wave-bottom" class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#27B3A2" fill-opacity="1"
+            d="M0,96L120,133.3C240,171,480,245,720,256C960,267,1200,213,1320,186.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+          </path>
+        </svg>
+      </div>
+
+      <div class="controls">
+        <div class="control prev-slide">&#171;</div>
+        <div class="control next-slide">&#187;</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+
+    <div class="contact-form">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/mknkaoeq" method="POST">
+        <div class="form-control-name">
+          <div>
+            <label for="name">First Name</label>
+            <input type="text" id="name" name="sender-first-name" placeholder="First Name" class="input-field"
+              required />
+          </div>
+
+          <div>
+            <label for="name">Last Name</label>
+            <input type="text" id="name" name="sender-last-name" placeholder="Last Name" class="input-field" required />
+          </div>
+        </div>
+
+        <div class="form-control-details">
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="sender-email" placeholder="Email Address" class="input-field"
+              required />
+          </div>
+          <div>
+            <label for="email">Phone Number</label>
+            <input type="phone-number" id="phone-number" name="sender-phone-number"
+              placeholder="Phone Number (Optional)" class="input-field" />
+          </div>
+        </div>
+
+        <div class="form-control-message">
+          <label for="message">Message</label>
+          <textarea id="message" cols="60" rows="10" placeholder="Type Message Here" name="message" class="input-field"
+            required></textarea>
+
+          <input type="submit" value="SEND" id="submit-btn" class="submit-btn" />
+        </div>
+
+
+      </form>
+    </div>
+
+    <div id="footer">
+      <a class="social-container" href="https://github.com/davidmbarnes">
+        <div class="social-container">
+          <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+            <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 
+                  4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 
+                  4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 
+                  0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 
+                  16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 
+                  2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 
+                  33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 
+                  2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 
+                  35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 
+                  1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+          </svg>
+          <div class="social-name">GITHUB</div>
+        </div>
+      </a>
+
+      <a class="social-container" href="https://codepen.io/dejaluca">
+        <div class="social-container">
+          <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 
+              14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 
+              9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 
+              0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 
+              346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 
+              448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z" />
+          </svg>
+          <div class="social-name">CODEPEN</div>
+        </div>
+      </a>
+
+      <a class="social-container" href=" https://mobile.twitter.com/DaveM_Barnes">
+        <div class="social-container">
+          <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 
+              8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 
+              18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 
+              0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 
+              30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 
+              60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+          </svg>
+          <div class="social-name">TWITTER</div>
+        </div>
+      </a>
+
+      <a class="social-container" href=" https://www.linkedin.com/in/dave-b-26698b224/">
+        <div class="social-container">
+          <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 
+              54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 
+              42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+          </svg>
+          <div class="social-name">LINKEDIN</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <script src="Scripts/Carousel.js"></script>
+  <script src="Scripts/Nav.js"></script>
+  <script src="Scripts/Sidebar.js"></script>
+  <script src="Scripts/Pause.js"></script>
+  <script src="Scripts/Mobile.js"></script>
+</body>
+
+</html>

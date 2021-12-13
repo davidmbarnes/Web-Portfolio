@@ -1,0 +1,233 @@
+#about {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#bio {
+  position: absolute;
+  width: 70%;
+  height: 30%;
+  top: 30vh;
+  border-radius: 6px;
+  text-align: center;
+  transition: var(--primary-transition);
+  font-size: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#bio:hover {
+  box-shadow: var(--primary-box-shadow);
+  transition: var(--primary-transition);
+}
+
+.bio-text {
+  text-align: center;
+  color: var(--white);
+  margin: 1%;
+  font-family: "Spectral";
+  font-size: calc(0.6em + 0.6vw);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid var(--accent-color);
+  width: 0%;
+}
+
+.bio-text:nth-child(1) {
+  -webkit-animation: type 4s linear 1s 1 normal both;
+  animation: type 4s linear 1s 1 normal both,
+    cursor 600ms linear 1s 8 normal both;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.bio-text:nth-child(2) {
+  border-right-color: transparent;
+  -webkit-animation: type 4s linear 1s 1 normal both;
+  animation: type 4s linear 1s 1 normal both,
+    cursor 600ms linear 4s 99 normal both;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.bio-text:nth-child(3) {
+  border-right-color: transparent;
+  -webkit-animation: type 4s linear 1s 1 normal both;
+  animation: type 4s linear 1s 1 normal both,
+    cursor 600ms linear 4s 99 normal both;
+  -webkit-animation-delay: 8s;
+  animation-delay: 9s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.skills {
+  position: absolute;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px ridge var(--primary-color);
+  border-bottom: 3px ridge var(--primary-color);
+  transition: var(--primary-transition);
+  animation: 3s ease-in-out 0s 1 slideInFromBottom;
+}
+
+.skills:hover {
+  padding: 30px;
+  box-shadow: var(--primary-box-shadow);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.skill-container {
+  position: relative;
+  transition: var(--primary-transition);
+  height: 15vh;
+  display: flex;
+}
+
+.skill-container:hover {
+  border-radius: 11px;
+  box-shadow: var(--secondary-box-shadow);
+  border: 2px inset var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: var(--primary-transition);
+
+}
+
+.skill-name {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0;
+  transition: .5s;
+  text-align: center;
+  z-index: 3;
+}
+
+.skill-description {
+  display: none;
+  transition: .5s;
+  transition: var(--primary-transition);
+}
+
+.icon {
+  padding: 0.5vw;
+  transition: var(--primary-transition);
+  height: auto;
+}
+
+.skill-container:hover .icon {
+  opacity: .1;
+  padding: 1vw;
+  cursor: pointer;
+  transition: var(--primary-transition);
+  background-color: var(--secondary-color);
+}
+
+.skill-container:hover .skill-name {
+  font-size: 2vh;
+  opacity: 1;
+  transition: var(--primary-transition);
+  cursor: pointer;
+  color: gainsboro;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: var(--primary-color);
+  text-shadow: -1px 0 var(--secondary-color),
+    0 1px var(--secondary-color),
+    1px 0 var(--secondary-color),
+    0 -1px var(--secondary-color);
+}
+
+/* cursor animations */
+
+@keyframes cursor {
+  from {
+    border-right-color: .15em solid #27B3A2;
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+    border-right: .15em solid #27B3A2;
+  }
+
+  99.9% {
+    border-right: .15em solid #27B3A2;
+  }
+
+  100% {
+    border: none;
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+    border: none;
+  }
+
+  99.9% {
+    border-right: .15em solid #27B3A2;
+
+  }
+
+  100% {
+    width: 90%;
+    border: none;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  80% {
+    padding: 30px;
+    box-shadow: var(--primary-box-shadow);
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  100% {
+    padding: 20px;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .skill-container {
+    height: auto;
+  }
+
+}

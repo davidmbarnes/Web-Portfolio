@@ -1,0 +1,82 @@
+#footer {
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--white);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 3px solid var(--primary-color);
+    z-index: 3;
+    box-shadow: var(--primary-box-shadow);
+    transition: var(--primary-transition);
+}
+
+#footer:hover {
+    padding: 22px;
+    border-radius: 10% 10% 0 0 / 10%;
+    transition: var(--primary-transition);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#footer:hover .social-container {
+    cursor: pointer;
+    transition: var(--primary-transition);
+    height: 12vh;
+}
+
+.social-container {
+    position: relative;
+    transition: var(--primary-transition);
+    height: 10vh;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.social-container:hover {
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    box-shadow: var(--secondary-box-shadow);
+    border: 1px inset var(--primary-color);
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: var(--primary-transition);
+}
+
+.social-name {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0%;
+    transition: .5s;
+    text-align: center;
+    z-index: 3;
+}
+
+.social-icon {
+    padding: 0.7vw;
+    transition: var(--primary-transition);
+    fill: var(--white);
+}
+
+.social-container:hover .social-icon {
+    opacity: .1;
+    padding: 1vw;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    transition: var(--primary-transition);
+}
+
+.social-container:hover .social-name {
+    font-size: 2vh;
+    opacity: 1;
+    transition: var(--primary-transition);
+    cursor: pointer;
+}

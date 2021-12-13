@@ -1,0 +1,230 @@
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10vh;
+  z-index: 0;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  gap: 0% 3%;
+}
+
+#project-descriptions {
+  flex: 1;
+  flex-basis: 10%;
+  height: 100%;
+  box-shadow: var(--primary-box-shadow);
+  text-align: center;
+  color: var(--white);
+  width: 100%;
+  border-radius: 6px;
+  transition: var(--primary-transition);
+  flex-direction: column;
+  display: flex;
+}
+
+#project-descriptions:hover {
+  background: rgba(0, 0, 0, 0.4);
+  transition: var(--primary-transition);
+}
+
+#project-descriptions p {
+  height: 5%;
+  padding: 2%;
+  margin: 0;
+  font-size: 1vw;
+  flex-basis: 10%;
+  flex: 1;
+}
+
+#project-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: var(--primary-transition);
+  text-decoration: none;
+  color: var(--white);
+  margin: auto;
+  z-index: 3;
+  width: 80%;
+  flex-basis: 90%;
+}
+
+.project-container {
+  transition: var(--primary-transition);
+  height: 35%;
+  width: 60%;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+.project-container a {
+  transition: var(--primary-transition);
+  height: 70%;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-basis: 70%;
+  flex: 1;
+}
+
+.project-icon {
+  width: 100%;
+  height: 100%;
+  padding: 1vw;
+  transition: var(--primary-transition);
+  border-radius: var(--secondary-border-radius);
+  margin-bottom: 5%;
+}
+
+.project-name {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-basis: 30%;
+  transition: var(--primary-transition);
+  border-radius: var(--secondary-border-radius);
+  color: var(--white);
+  font-size: calc(0.1em + 2vh);
+}
+
+.project-name:hover {
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  box-shadow: var(--secondary-box-shadow);
+  border: 2px inset var(--accent-color);
+  background-color: rgb(39, 179, 162, 0.5);
+  cursor: pointer;
+  transition: var(--primary-transition);
+  font-size: calc(0.1em + 1.5vh);
+}
+
+.project-container:hover .project-icon {
+  padding: 0.5vw;
+  cursor: pointer;
+  transition: var(--primary-transition);
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+
+#carousel {
+  flex: 1;
+  flex-basis: 60%;
+  position: relative;
+  height: 100%;
+  box-shadow: var(--primary-box-shadow);
+  border-radius: 6px;
+}
+
+#slider {
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.slider {
+  width: 400%;
+  height: 100%;
+  position: relative;
+  transition: 1s ease-in-out all;
+}
+
+.slides {
+  width: 25%;
+  height: 100%;
+  float: left;
+  position: relative;
+  z-index: 0;
+  transition: ease .3s;
+}
+
+.wave {
+  position: absolute;
+}
+
+#wave-top {
+  top: 0;
+}
+
+#wave-bottom {
+  bottom: 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.image:hover {
+  cursor: pointer;
+}
+
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 1%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transition: all ease 0.5s;
+}
+
+.control {
+  opacity: 0;
+  cursor: pointer;
+  font-size: 3.5vw;
+  padding: 0 10px;
+  color: var(--primary-color);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--primary-transition);
+}
+
+#carousel:hover .control {
+  opacity: 1;
+  color: var(--primary-color);
+  text-shadow: -1px 0 var(--accent-color),
+    0 1px var(--accent-color),
+    1px 0 var(--accent-color),
+    0 -1px var(--accent-color);
+}
+
+.prev-slide:hover {
+  color: var(--accent-color) !important;
+  font-size: 4.5vw;
+  text-shadow: -1px 0 var(--white),
+    0 1px var(--white),
+    1px 0 var(--white),
+    0 -1px var(--white) !important;
+}
+
+.next-slide:hover {
+  color: var(--accent-color) !important;
+  font-size: 4vw;
+  text-shadow: -1px 0 var(--white),
+    0 1px var(--white),
+    1px 0 var(--white),
+    0 -1px var(--white) !important;
+}
+
+@media only screen and (max-width: 850px) {
+  #projects {
+    display: none;
+  }
+}

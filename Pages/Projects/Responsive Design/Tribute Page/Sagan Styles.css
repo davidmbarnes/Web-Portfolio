@@ -1,0 +1,167 @@
+
+#img-div{
+    line-height: 0px;
+    position: relative;
+}
+
+
+#image{
+    width: 100vw;
+    height: auto;
+    background-size:100% 100%;
+    max-width: 100%;
+    display: block;
+}
+
+#title {
+    position: absolute;
+    top: 20%;
+    left:2%;
+    font-size:4vw;
+    color: #e6fffb;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+   
+}
+
+#img-caption {
+    position: absolute;
+    top: 72%;
+    left: 7%;
+    font-size: 1.5vw;
+    color: #e6fffb;
+}
+
+
+#content-div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#gallery {
+    background-image: url(stars.gif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+    flex: 1;
+    flex-basis: 30%;
+}
+
+
+
+#gallery img {
+    width: 50%;
+    height: 25%;  
+    border-style: outset;
+    border-color: #1e272c;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15%;
+
+  }
+
+#gallery img:first-child {
+    margin-top: 15%;
+  }
+
+
+
+#tribute-info {
+    background-color: #1e272c;
+    flex: 1;
+    flex-basis: 70%;
+}
+
+
+
+#tribute-info h2 {
+    padding-left: 2vw;
+    font-family: Monserrat;
+    font-size: 2.2vw;
+    color: #e6fffb;
+
+}
+
+#tribute-info p {
+    padding-left: 3vw;
+    padding-right: 3vw;
+    font-family: Lora;
+    font-size: 1.2vw;
+    color: whitesmoke;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#tribute-info ul {
+    padding-left: 6vw;
+    padding-right: 3vw;
+    font-family: Lora;
+    font-size: 0.8vw;
+    color: whitesmoke;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#quotes {
+    position: relative;
+}
+
+#quote{
+    position: absolute;
+    font-family: Lora;
+    color: whitesmoke;
+    font-size: 1vw;
+    Left: 40%;
+    top: 70% ;
+}
+
+#tribute-link {
+    text-decoration: none;
+    color: greenyellow;
+}
+
+#tribute-link:hover {
+    color: rgb(112, 129, 85);
+}
+
+#tribute-link:active {
+    text-decoration: none;
+    color: blue;
+}
+
+
+
+body {
+    margin: 0;
+    background-color: #1e272c;
+}
+
+@media only screen and (max-width: 1000px) {  
+    #gallery { 
+        display: none; 
+    }
+    
+   
+    #tribute-info h2 {
+        font-size: 4vw;
+    }
+    
+    #tribute-info p {
+        font-size: 3vw;
+
+    }
+    
+    #tribute-info ul {
+        font-size: 2vw;
+    }
+
+    #quote{
+        font-size: 2vw;
+        position: relative;
+        Left: 60%;
+        top: 0 ;
+    }
+
+}
+
