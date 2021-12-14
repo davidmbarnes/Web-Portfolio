@@ -163,8 +163,19 @@
   }
 }
 
-/* @media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1250px) {
+  #side-panel {
+    left: -2.5%;
+  }
+
+  .expand:hover {
+    width: 200%;
+
+  }
+}
+
+@media only screen and (max-width: 1000px) {
   #side-panel {
     display: none;
   }
-} */
+}
