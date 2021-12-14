@@ -77,7 +77,6 @@
   width: 100%;
   padding: 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   border-top: 3px ridge var(--primary-color);
