@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="Styles/Projects.css" />
   <link rel="stylesheet" href="Styles/Contact.css" />
   <link rel="stylesheet" href="Styles/Footer.css" />
-  <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 425px)" href="Styles/Mobile.css" />
+  <link rel="stylesheet" type="text/css" media="(device-width: 425px) and (device-height:
+    665px)" href="Styles/Mobile.css" />
 </head>
 
 <body>
@@ -68,10 +69,9 @@
       </a>
 
 
-      <div class="expand-img" onclick="Pause()" href="">
-        <?xml version="1.0" ?>
-        <svg id="pause" height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1"
-          viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+      <div class="expand-img" onclick="Pause()">
+        <svg id="pause" height="512px" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"
+          width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
           <g>
             <path
@@ -81,9 +81,8 @@
           </g>
         </svg>
 
-        <svg id="resume" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px" y="0px" viewBox="0 0 17.804 17.804" style="enable-background:new 0 0 17.804 17.804;"
-          xml:space="preserve">
+        <svg id="resume" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 17.804 17.804" style="enable-background:new 0 0 17.804 17.804;" xml:space="preserve">
           <g>
             <g id="c93_stop">
               <path d="M2.44,0.043c0.14-0.071,0.304-0.051,0.425,0.044l10.777,8.502c0.094,0.074,0.152,0.191,0.152,0.312
@@ -121,7 +120,7 @@
       </svg>
     </div>
     <div id="mobile-menu-hide">
-      <svg onclick="mobile()" id="no-hamburger" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+      <svg onclick="mobile()" id="no-hamburger" version="1.1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
         style="enable-background:new 0 0 512 512;" xml:space="preserve">
         <g>
@@ -157,10 +156,10 @@
           <a href="Pages/Projects/Projects.html">PROJECTS</a>
           <ul>
             <li>
-              <a href="Pages/Projects/Responsive Design.html">RESPONSIVE DESIGN</a>
+              <a href="Pages/Projects/Responsive%20Design.html">RESPONSIVE DESIGN</a>
             </li>
             <li>
-              <a href="Pages/Projects/React JS.html">REACT JS</a>
+              <a href="Pages/Projects/React%20JS.html">REACT JS</a>
             </li>
           </ul>
         </li>
@@ -339,10 +338,10 @@
       <div id="project-wrapper">
         <div class="project-container">
           <div class="project-name" id="responsive-design">RESPONSIVE DESIGN</div>
-          <a href="Pages/Projects/Responsive Design/Tribute Page/Tribute Page.html" title="Tribute Page: Carl Sagan"
+          <a href="Pages/Projects/Responsive Design/Tribute%20Page/Tribute%20Page.html" title="Tribute Page: Carl Sagan"
             target="_blank" rel="noopener noreferrer">
             <img src="assets/icons/Projects/SeekPng.com_responsive-website-png_2492971.png"
-              alt="Responsive Design - Icon" id="responsive-design" class="project-icon" />
+              alt="Responsive Design - Icon" class="project-icon" />
           </a>
         </div>
 
@@ -350,19 +349,17 @@
           <div class="project-name" id="react">REACT JS</div>
           <a href="https://davidmbarnes.github.io/robofriends/" title="React App: Robofriends" target="_blank"
             rel="noopener noreferrer">
-            <img src="assets/icons/Projects/pngaaa.com-2507950.png" alt="React JS - Icon" id="react"
-              class="project-icon" />
+            <img src="assets/icons/Projects/pngaaa.com-2507950.png" alt="React JS - Icon" class="project-icon" />
           </a>
         </div>
 
       </div>
     </div>
-    </div>
     <div id="carousel">
       <div id="slider">
         <div class="slider">
           <a class="slides" title="Tribute Page: Carl Sagan"
-            href="Pages/Projects/Responsive Design/Tribute Page/Tribute Page.html" target="_blank" rel="noopener
+            href="Pages/Projects/Responsive Design/Tribute%20Page/Tribute%20Page.html" target="_blank" rel="noopener
             noreferrer">
             <div class="image">
               <img src="Assets/Carusel/sagan.gif"
@@ -406,27 +403,26 @@
       <form action="https://formspree.io/f/mknkaoeq" method="POST">
         <div class="form-control-name">
           <div>
-            <label for="name">First Name</label>
-            <input type="text" id="name" name="sender-first-name" placeholder="First Name" class="input-field"
-              required />
+            <label for="sender-first-name">First Name</label>
+            <input type="text" name="sender-first-name" placeholder="First Name" class="input-field" required />
           </div>
 
           <div>
-            <label for="name">Last Name</label>
-            <input type="text" id="name" name="sender-last-name" placeholder="Last Name" class="input-field" required />
+            <label for="sender-last-name">Last Name</label>
+            <input type="text" name="sender-last-name" placeholder="Last Name" class="input-field" required />
           </div>
         </div>
 
         <div class="form-control-details">
           <div>
-            <label for="email">Email</label>
+            <label for="sender-email">Email</label>
             <input type="email" id="email" name="sender-email" placeholder="Email Address" class="input-field"
               required />
           </div>
           <div>
-            <label for="email">Phone Number</label>
-            <input type="phone-number" id="phone-number" name="sender-phone-number"
-              placeholder="Phone Number (Optional)" class="input-field" />
+            <label for="sender-phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" name="sender-phone-number" placeholder="Phone Number (Optional)"
+              class="input-field" />
           </div>
         </div>
 
