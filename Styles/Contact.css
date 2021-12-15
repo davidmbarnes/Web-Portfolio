@@ -26,15 +26,15 @@
 .contact-form h2 {
   text-align: center;
   position: absolute;
-  left: 44%;
+  width: 100%;
   bottom: 100%;
+  left: 0;
 }
 
 .contact-form form {
   height: 100%;
   display: flex;
   flex-direction: column;
-
 }
 
 .contact-form label {
@@ -42,6 +42,7 @@
   height: 3vh;
   margin-bottom: 1vh;
   font-size: 2vh;
+  white-space: nowrap;
 }
 
 .contact-form input {
@@ -179,8 +180,9 @@
   opacity: 1;
 }
 
-/* @media only screen and (max-width: 850px) {
-  #contact {
-    display: none;
+@media only screen and (max-width: 300px) {
+  .contact-form label {
+    margin-bottom: 0;
+    font-size: 1.5vh;
   }
-} */
+}
