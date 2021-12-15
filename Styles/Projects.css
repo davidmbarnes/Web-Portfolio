@@ -32,7 +32,7 @@
   height: 5%;
   padding: 2%;
   margin: 0;
-  font-size: 1vw;
+  font-size: calc(0.1em + 1vw);
   flex-basis: 10%;
   flex: 1;
 }
@@ -93,7 +93,7 @@
   transition: var(--primary-transition);
   border-radius: var(--secondary-border-radius);
   color: var(--white);
-  font-size: calc(0.1em + 2vh);
+  font-size: calc(0.1em + 1vw);
 }
 
 .project-name:hover {
@@ -103,7 +103,7 @@
   background-color: rgb(39, 179, 162, 0.5);
   cursor: pointer;
   transition: var(--primary-transition);
-  font-size: calc(0.1em + 1.5vh);
+  font-size: calc(0.1em + 0.8vw);
 }
 
 .project-container:hover .project-icon {
@@ -223,8 +223,8 @@
     0 -1px var(--white) !important;
 }
 
-@media only screen and (max-width: 850px) {
+/* @media only screen and (max-width: 850px) {
   #projects {
     display: none;
   }
-}
+} */

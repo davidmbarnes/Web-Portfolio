@@ -5,7 +5,7 @@ function mobile() {
         document.getElementById("mobile-menu-hide").style.bottom = "12vh";
         document.getElementById("mobile-menu-unhide").style.display = "none";
         document.getElementById("mobile-header-section").style.bottom = "0";
-        document.getElementById("side-panel").style.left = "-100%";
+        document.getElementById("side-panel").style.left = "-120%";
     } else {
         document.getElementById("mobile-menu-unhide").style.display = "flex"
         document.getElementById("hamburger").style.position = "static";
@@ -13,7 +13,7 @@ function mobile() {
         document.getElementById("no-hamburger").style.bottom = "-100%";
         document.getElementById("mobile-header-section").style.bottom = "-100%";
         document.getElementById("mobile-menu-hide").style.bottom = "-100%";
-        document.getElementById("side-panel").style.left = "-80%";
+        document.getElementById("side-panel").style.left = "-85%";
     }
 }
 
