@@ -125,7 +125,7 @@
   padding-right: 10vw;
   margin: 1.5vh;
   margin-right: 30vw;
-  font-size: 1.5vh;
+  font-size: 1vw;
   height: auto;
 }
 
@@ -172,7 +172,9 @@
 }
 
 .pages-skills-img svg {
-  width: 10vw;
+  padding: 0.7vw;
+  transition: var(--primary-transition);
+  fill: var(--white);
 }
 
 .pages-skills-img:hover svg {
@@ -189,6 +191,13 @@
 }
 
 .pages-skills-img:hover img {
+  opacity: .1;
+  padding: 1vw;
+  background-color: var(--secondary-color);
+  transition: var(--primary-transition);
+}
+
+.pages-skills-img:hover svg {
   opacity: .1;
   padding: 1vw;
   background-color: var(--secondary-color);
@@ -513,10 +522,10 @@
   padding-left: 6.5vw;
   padding-right: 5vw;
   margin: 1.5vh;
-  margin-bottom: 0.5vh;
+  margin-bottom: 1vh;
   margin-right: 10vw;
   font-size: 1.5vw;
-  height: 5%;
+  height: auto;
 }
 
 #contact-header {
@@ -526,10 +535,10 @@
   padding-left: 6.5vw;
   padding-right: 5vw;
   margin: 1.5vh;
-  margin-bottom: 0vh;
+  margin-bottom: 1vh;
   margin-right: 10vw;
-  height: 7%;
-  margin-top: 1%;
+  height: auto;
+  margin-top: 0;
 }
 
 .contact-content {
@@ -540,5 +549,16 @@
   margin: 1.5vh;
   margin-right: 20vw;
   font-size: 1vw;
-  height: 10%;
+  height: auto;
+  margin-right: 30vw;
+}
+
+@media only screen and (max-width: 1200px) {
+  .about-content {
+    font-size: 1.4vw;
+  }
+
+  .contact-content {
+    font-size: 1.5vw;
+  }
 }
