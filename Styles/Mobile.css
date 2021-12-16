@@ -563,7 +563,9 @@ header {
 
 .contact-content {
     font-size: 2vw;
-    height: 10vh;
+    padding-right: 10vw;
+    margin-right: 10vw;
+    height: auto;
 }
 
 @keyframes slideInFromBottom {
