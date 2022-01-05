@@ -34,6 +34,8 @@
   background-color: var(--secondary-color);
   box-shadow: 2px 2px 15px 2px var(--secondary-shadow);
   align-items: center;
+  border-bottom: 1px inset var(--primary-color);
+  border-top: 1px outset var(--primary-color);
 }
 
 #links-container {
