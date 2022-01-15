@@ -103,7 +103,7 @@
   display: flex;
   flex-direction: column;
   flex-basis: 80%;
-  height: 95%;
+  height: 100%;
   overflow-y: scroll;
   overflow: auto;
 }
@@ -116,6 +116,7 @@
   margin: 1.5vh;
   margin-bottom: 0.5vh;
   margin-right: 10vw;
+  margin-top: 5vh;
   font-size: 1.5vw;
   height: auto;
 }
@@ -143,9 +144,8 @@
   margin-bottom: 2% !important;
   width: auto;
   text-align: left;
-  padding-left: 6.5vw;
-  padding-right: 5vw;
   margin: 1.5vh;
+  margin-top: 5vh;
   font-size: 2vw;
 }
 
@@ -528,6 +528,7 @@
   margin-right: 10vw;
   font-size: 1.5vw;
   height: auto;
+  margin-top: 5vh;
 }
 
 #contact-header {
@@ -555,7 +556,7 @@
   margin-right: 30vw;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
   .about-content {
     font-size: 1.4vw;
   }

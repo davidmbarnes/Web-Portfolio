@@ -164,7 +164,7 @@ header {
 
 #bio {
     position: absolute;
-    width: 100%;
+    width: 90%;
     height: 20%;
     top: 10vh;
     border-radius: 6px;
@@ -325,6 +325,17 @@ header {
     border-radius: 0;
 }
 
+.control {
+    font-size: 13vw;
+}
+
+.prev-slide:hover {
+    font-size: 16vw;
+}
+
+.next-slide:hover {
+    font-size: 16vw;
+}
 
 .contact-form {
     width: 95%;
