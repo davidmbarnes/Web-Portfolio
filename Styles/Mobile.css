@@ -578,6 +578,10 @@ header {
     height: auto;
 }
 
+.contact-form .input-field {
+    padding-left: 2vw;
+}
+
 @keyframes slideInFromBottom {
     0% {
         transform: translateY(100%);

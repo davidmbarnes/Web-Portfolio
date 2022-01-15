@@ -57,7 +57,7 @@
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 0.7vw;
+  padding-left: 10px;
   border-radius: 5px;
   border: 2px inset var(--primary-color);
   box-shadow: var(--secondary-box-shadow);
