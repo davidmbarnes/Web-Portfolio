@@ -8,6 +8,7 @@
   transition: var(--primary-transition);
   display: flex;
   flex-direction: column;
+  left: 0;
   animation: 3s ease-out 0s 1 slideInFromLeft;
 }
 
@@ -166,16 +167,17 @@
 @media only screen and (max-width: 1250px) {
   #side-panel {
     left: -2.5%;
+    transition: var(--primary-transition);
   }
 
   .expand:hover {
     width: 200%;
-
   }
 }
 
 @media only screen and (max-width: 1000px) {
   #side-panel {
-    display: none;
+    left: -50%;
+    transition: var(--primary-transition);
   }
 }

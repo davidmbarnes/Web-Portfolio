@@ -216,7 +216,7 @@
 
 .next-slide:hover {
   color: var(--accent-color) !important;
-  font-size: 4vw;
+  font-size: 4.5vw;
   text-shadow: -1px 0 var(--white),
     0 1px var(--white),
     1px 0 var(--white),
