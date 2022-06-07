@@ -364,7 +364,7 @@ header {
     background: rgba(0, 0, 0, 0.0);
     border-top: none;
     box-shadow: none;
-    bottom: 0;
+    bottom: 0 !important;
 }
 
 #footer:hover {
