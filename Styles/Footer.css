@@ -1,4 +1,8 @@
 #footer {
+    position: absolute;
+}
+
+.footer {
     position: fixed;
     margin: auto;
     text-align: center;
@@ -16,14 +20,14 @@
     transition: var(--primary-transition);
 }
 
-#footer:hover {
+.footer:hover {
     padding: 22px;
     border-radius: 10% 10% 0 0 / 10%;
     transition: var(--primary-transition);
     background: rgba(0, 0, 0, 0.4);
 }
 
-#footer:hover .social-container {
+.footer:hover .social-container {
     cursor: pointer;
     transition: var(--primary-transition);
     height: 12vh;
