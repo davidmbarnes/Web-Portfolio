@@ -27,7 +27,7 @@ header {
 
 #hamburger {
     height: 100%;
-    width: 100%;
+    width: 10%;
     color: silver;
     display: flex;
     align-items: center;
@@ -72,20 +72,24 @@ header {
     /* padding: 4vh; */
     border-radius: 20% 20% 0 0/ 10%;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
     border-top: 3px solid silver;
     box-shadow: 0px 2px 15px 2px var(--secondary-shadow);
     transition: var(--primary-transition);
     background-color: rgba(0, 0, 0, 0.5);
     left: 0;
+    right: 0;
     bottom: -100%;
     display: flex;
+    overflow-x: hidden;
 }
 
 .mobile-header-section {
     padding: 4vh;
     height: 100%;
-    width: 100%;
+    width: 50%;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -93,6 +97,7 @@ header {
     color: var(--white);
     transition: var(--primary-transition);
     font-size: calc(0.3em + 0.4vw);
+    overflow-x: hidden;
 }
 
 .mobile-header-section:hover {
@@ -352,16 +357,17 @@ header {
     margin-right: 2%;
 }
 
-#footer {
+.footer {
     position: fixed;
     height: 10vh;
     top: -90%;
     background: rgba(0, 0, 0, 0.0);
     border-top: none;
     box-shadow: none;
+    bottom: 0 !important;
 }
 
-#footer:hover {
+.footer:hover {
     padding: 22px;
     border-radius: 0%;
     transition: var(--primary-transition);
