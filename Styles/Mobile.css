@@ -357,7 +357,7 @@ header {
     margin-right: 2%;
 }
 
-#footer {
+.footer {
     position: fixed;
     height: 10vh;
     top: -90%;
@@ -367,7 +367,7 @@ header {
     bottom: 0 !important;
 }
 
-#footer:hover {
+.footer:hover {
     padding: 22px;
     border-radius: 0%;
     transition: var(--primary-transition);
